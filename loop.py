@@ -3,7 +3,7 @@ import random
 
 import requests
 
-url = 'http://localhost:5000/upload/metrics/'
+url = 'http://0.0.0.0:9980/upload/metrics/'
 
 while True:
     for name in range(1, 11):
