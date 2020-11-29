@@ -23,7 +23,7 @@ def uploader():
         resp = make_response("Bad request\n", 400)
         return resp
 
-    client = Client(host='localhost')
+    client = Client(host='clickhouse')
     # print(dict_['metric_name'])
     # print(dict_['metric_value'])
     now = datetime.now()
@@ -36,4 +36,4 @@ def uploader():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=80)

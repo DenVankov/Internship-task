@@ -28,4 +28,14 @@ Clickhouse, Grafana и сам сервис должны быть подняты 
 
 Внутри grafana были написаны простые запросы для вывода графиков, где по оси OX - TimeStamp, а OY - metric_value. В качестве примера было построено 4 графика для первых 4-х метрик.
 
+(Example)
+```SQL
+SELECT
+    $timeSeries as t,
+    metric_value as first
+FROM $table
+
+WHERE $timeFilter AND metric_name = 'metric_1'
+```
+
 ![res.png](img/res.png)
